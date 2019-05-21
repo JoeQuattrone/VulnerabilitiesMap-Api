@@ -38,6 +38,10 @@ class HackersController < ApplicationController
     @hacker.destroy
   end
 
+  def create_hackers
+    Hacker.make_hackers
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_hacker
