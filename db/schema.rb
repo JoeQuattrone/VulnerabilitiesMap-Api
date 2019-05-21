@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_234507) do
+ActiveRecord::Schema.define(version: 2019_05_21_002229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hackers", force: :cascade do |t|
+    t.string "ip"
+    t.string "type"
+    t.string "continent_code"
+    t.string "continent_name"
+    t.string "country_code"
+    t.string "region_code"
+    t.string "region_name"
+    t.string "city"
+    t.string "zip"
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.integer "geoname_id"
+    t.string "capital"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "ip_addresses", force: :cascade do |t|
     t.text "address_data", default: [], array: true
