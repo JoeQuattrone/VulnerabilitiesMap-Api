@@ -14,7 +14,6 @@ class CreateHackers < ActiveRecord::Migration[5.2]
       t.decimal :longitude
       t.integer :geoname_id
       t.string :capital
-
       t.timestamps
     end
   end

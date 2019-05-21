@@ -33,10 +33,6 @@ class IpAddressesController < ApplicationController
     end
   end
 
-  def get_data
-    IpAddress.get_data
-  end
-
   # DELETE /ip_addresses/1
   def destroy
     @ip_address.destroy
